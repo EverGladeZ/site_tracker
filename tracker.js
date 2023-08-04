@@ -4,6 +4,7 @@ window.addEventListener("load", (event) => {
   var xhr = new XMLHttpRequest();
   xhr.withCredentials = false;
   xhr.open("POST", dataCollectionUrl, true);
+  xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
   xhr.setRequestHeader("Content-type", "application/json");
   xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
   xhr.onreadystatechange = function () {
